@@ -1,7 +1,9 @@
 #include <stdio.h>
 int fibonacci(int);
 int main(void){
-  for (int i = 0; i<= 35 ; i++)
+  int n;
+  scanf("%d", &n);
+  for (int i = 0; i<= n ; i++)
     printf("%d  ", fibonacci(i));
   printf("\n");
   return 0;
