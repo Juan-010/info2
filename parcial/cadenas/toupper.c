@@ -1,3 +1,7 @@
+/*
+Escribir un programa que convierta a mayusculas
+las cadenas pasadas por lınea de comandos
+*/
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>

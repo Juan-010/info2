@@ -1,3 +1,9 @@
+/*Ampliar la funcion float2str() para que reciba 
+como ultimo argumento la cantidad de cifras 
+decimales que se quieren obtener de la conversion.
+El Listado 8 muestra el codigo fuente del programa
+de prueba y el Listado 9 muestra la salida del programa.
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
