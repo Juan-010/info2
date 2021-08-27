@@ -3,7 +3,7 @@
 int main(void){
 	char p1;
 	FILE *ptrArchivo;
-	ptrArchivo = fopen("text.txt","r");
+	ptrArchivo = fopen("textfiles/readText.txt","r");
 	
 	if(ptrArchivo != NULL)
 		while((p1 = fgetc(ptrArchivo)) != EOF){
