@@ -1,50 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-struct nodo {
-	char dato;
-	struct nodo * ptrSig;	
-};
-typedef struct nodo Nodo;
-typedef struct nodo * ptrNodo;
-
-void insert(ptrNodo *, char);
-char delete(ptrNodo *, char);
-int isEmpty(Nodo *);
-void printList(Nodo *);
-int menu(void);
-
-int main(void){
-	ptrNodo ptrInicio = NULL;
-	char tmpDato;
-	while(1){
-		int choice = menu();
-		switch (choice) {
-			case 1:
-				scanf(" %c", &tmpDato);
-				insert(&ptrInicio, tmpDato);
-				printList(ptrInicio);
-				break;
-			
-			case 2:
-				scanf(" %c", &tmpDato);
-				if (delete(&ptrInicio, tmpDato)){
-					printf("Se ha eliminado \'%c\' correctamente.\n", tmpDato);
-					
-				}
-				else{
-					printf("No se ha encontrado \'%c\'.\n", tmpDato);
-					printList(ptrInicio);
-				}
-				break;
-			
-			case 3:
-				exit(EXIT_SUCCESS);
-				break;
-			
-	}
-	}
-}
-
+#include "lib-enlazada.h"
 int menu(void){
 	int choice;
 	printf("1. Insertar nodo\n");
@@ -98,12 +52,10 @@ void printList(ptrNodo ptrActual){
 }
 
 char delete(ptrNodo *ptrInicio, char valor){
-	ptrNodo ptrAnterior, ptrActual, tempPtr;
+	ptrNodo ptrAnterior, ptrActual;
 	
 	if (valor == (*ptrInicio)->dato) {
-		tempPtr = *ptrInicio;
 		*ptrInicio =(*ptrInicio)->ptrSig;
-		free(tempPtr);
 		return valor;
 	}
 	else {
