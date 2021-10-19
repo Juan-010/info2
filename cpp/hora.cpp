@@ -1,18 +1,6 @@
 #include <iostream>
 using namespace std;
 
-class Hora{
-	public:
-		Hora();
-		void setHora(int, int, int);
-		void printMilitar();
-		void printEstandar();
-	
-	private:
-		int hora; // 0 - 23
-		int minuto; // 0 - 59
-		int segundo; // 0 - 59
-};
 
 Hora::Hora(){
 	hora = minuto = segundo = 0;
